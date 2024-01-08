@@ -23,13 +23,17 @@ class Particle {
   }
   
   var particles = []
+
+  var num_particles = 0
   
   function setup() {
     createCanvas(windowWidth, windowHeight);
 
     particles = []
+
+    num_particles = Math.floor(windowWidth*windowHeight/20000)
     
-    for(let i = 0;i< 100; i++) {
+    for(let i = 0;i< num_particles; i++) {
       
       var rad = Math.random()*2 + 3
       
@@ -70,8 +74,9 @@ class Particle {
 	resizeCanvas(windowWidth, windowHeight);
 
     particles = []
+    num_particles = Math.floor(windowWidth*windowHeight/20000)
     
-    for(let i = 0;i< 100; i++) {
+    for(let i = 0;i< num_particles; i++) {
       
       var rad = Math.random()*2 + 3
       
